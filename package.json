@@ -3,8 +3,9 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "build": "npm run build-js & npm run build-css",
     "build-js": "browserify -t browserify-lodash-template-loader -e app/main.js -o javascripts/putcast.js --debug",
-    "build-css": "lessc --verbose public/less/main.less css/putcast.css",
+    "build-css": "lessc --verbose less/main.less css/putcast.css",
     "watch": "npm run watch-js & npm run watch-css",
     "watch-js": "gazer -p 'app/**/*' npm run build-js",
     "watch-css": "gazer -p 'less/**/*.less' npm run build-css"
