@@ -1,0 +1,32 @@
+@import "bootstrap/bootstrap.less";
+@import "components/animations.less";
+@import "components/player.less";
+
+#main section {
+  display: none;
+  &.ui-active {
+    display: block;
+    .animate-fadeIn(300ms);
+  }
+
+  &.file-list {
+    .table tr > td {
+      vertical-align: middle;
+      &.type {
+        width: 60px;
+      }
+      &.title {
+        line-height: 2.6em;
+      }
+    }
+    .img-thumbnail {
+      width: 40px;
+      height: 40px;
+      border: none;
+    }
+  }
+}
+
+#media_control {
+  // position: fixed;
+}

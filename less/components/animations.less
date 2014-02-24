@@ -1,0 +1,231 @@
+.animate-fadeIn(@time: 1s; @from: 0; @to: 100; @delay: 0s;) {
+  -webkit-animation: animate-fadeIn @time @delay;
+     -moz-animation: animate-fadeIn @time @delay;
+       -o-animation: animate-fadeIn @time @delay;
+          animation: animate-fadeIn @time @delay;
+
+  @-webkit-keyframes animate-fadeIn {
+    from { .opacity(@from); }
+    to { .opacity(@to); }
+  }
+  @-moz-keyframes animate-fadeIn {
+    from { .opacity(@from); }
+    to { .opacity(@to); }
+  }
+  @-o-keyframes animate-fadeIn {
+    from { .opacity(@from); }
+    to { .opacity(@to); }
+  }
+  @keyframes animate-fadeIn {
+    from { .opacity(@from); }
+    to { .opacity(@to); }
+  }
+}
+
+.animate-fadeOut(@time: 1s; @from: 100; @to: 0; @delay: 0s;) {
+  -webkit-animation: animate-fadeOut @time @delay;
+     -moz-animation: animate-fadeOut @time @delay;
+       -o-animation: animate-fadeOut @time @delay;
+          animation: animate-fadeOut @time @delay;
+
+  @-webkit-keyframes animate-fadeOut {
+    from { .opacity(@from); }
+    to { .opacity(@to); }
+  }
+  @-moz-keyframes animate-fadeOut {
+    from { .opacity(@from); }
+    to { .opacity(@to); }
+  }
+  @-o-keyframes animate-fadeOut {
+    from { .opacity(@from); }
+    to { .opacity(@to); }
+  }
+  @keyframes animate-fadeOut {
+    from { .opacity(@from); }
+    to { .opacity(@to); }
+  }
+}
+
+.animate-pulse(@time; @startColor; @endColor: darken(@startColor, 30); @iterations: infinite;) {
+  -webkit-animation-name: pulse;
+          animation-name: pulse;
+  -webkit-animation-duration: @time;
+          animation-duration: @time;
+  -webkit-animation-iteration-count: @iterations;
+          animation-iteration-count: @iterations;
+
+  @-webkit-keyframes pulse {
+    from {
+      background-color: @startColor;
+      .box-shadow(0 0 5px #000);
+    }
+    50% {
+      background-color: @endColor;
+      .box-shadow(0 0 10px @endColor);
+    }
+    to {
+      background-color: @startColor;
+      .box-shadow(0 0 5px #000);
+    }
+  }
+}
+
+.animate-flyInRight(@time: 1s; @from: 100%; @to: 0; @delay: 0s;) {
+  -webkit-animation: animate-flyIn @time;
+     -moz-animation: animate-flyIn @time;
+       -o-animation: animate-flyIn @time;
+          animation: animate-flyIn @time;
+
+  @-webkit-keyframes animate-flyIn {
+    from {
+      .translate3d(@from, 0, 0);
+    }
+    to {
+      .translate3d(@to, 0, 0);
+    }
+  }
+  @-moz-keyframes animate-flyIn {
+    from {
+      .translate3d(@from, 0, 0);
+    }
+    to {
+      .translate3d(@to, 0, 0);
+    }
+  }
+  @-o-keyframes animate-flyIn {
+    from {
+      .translate3d(@from, 0, 0);
+    }
+    to {
+      .translate3d(@to, 0, 0);
+    }
+  }
+  @keyframes animate-flyIn {
+    from {
+      .translate3d(@from, 0, 0);
+    }
+    to {
+      .translate3d(@to, 0, 0);
+    }
+  }
+}
+
+.animate-flyInLeft(@time: 1s; @from: -100%; @to: 0; @delay: 0s;) {
+  -webkit-animation: animate-flyInLeft @time;
+     -moz-animation: animate-flyInLeft @time;
+       -o-animation: animate-flyInLeft @time;
+          animation: animate-flyInLeft @time;
+
+  @-webkit-keyframes animate-flyInLeft {
+    from {
+      .translate3d(@from, 0, 0);
+    }
+    to {
+      .translate3d(@to, 0, 0);
+    }
+  }
+  @-moz-keyframes animate-flyInLeft {
+    from {
+      .translate3d(@from, 0, 0);
+    }
+    to {
+      .translate3d(@to, 0, 0);
+    }
+  }
+  @-o-keyframes animate-flyInLeft {
+    from {
+      .translate3d(@from, 0, 0);
+    }
+    to {
+      .translate3d(@to, 0, 0);
+    }
+  }
+  @keyframes animate-flyInLeft {
+    from {
+      .translate3d(@from, 0, 0);
+    }
+    to {
+      .translate3d(@to, 0, 0);
+    }
+  }
+}
+
+.animate-flyOutLeft(@time: 1s; @from: -100%; @to: 0; @delay: 0s;) {
+  -webkit-animation: animate-flyOutLeft @time;
+     -moz-animation: animate-flyOutLeft @time;
+       -o-animation: animate-flyOutLeft @time;
+          animation: animate-flyOutLeft @time;
+
+  @-webkit-keyframes animate-flyOutLeft {
+    from {
+      .translate3d(@from, 0, 0);
+    }
+    to {
+      .translate3d(@to, 0, 0);
+    }
+  }
+  @-moz-keyframes animate-flyOutLeft {
+    from {
+      .translate3d(@from, 0, 0);
+    }
+    to {
+      .translate3d(@to, 0, 0);
+    }
+  }
+  @-o-keyframes animate-flyOutLeft {
+    from {
+      .translate3d(@from, 0, 0);
+    }
+    to {
+      .translate3d(@to, 0, 0);
+    }
+  }
+  @keyframes animate-flyOutLeft {
+    from {
+      .translate3d(@from, 0, 0);
+    }
+    to {
+      .translate3d(@to, 0, 0);
+    }
+  }
+}
+
+.animate-flyOutRight(@time: 1s; @from: -100%; @to: 0; @delay: 0s;) {
+  -webkit-animation: animate-flyOutRight @time;
+     -moz-animation: animate-flyOutRight @time;
+       -o-animation: animate-flyOutRight @time;
+          animation: animate-flyOutRight @time;
+
+  @-webkit-keyframes animate-flyOutRight {
+    from {
+      .translate3d(@from, 0, 0);
+    }
+    to {
+      .translate3d(@to, 0, 0);
+    }
+  }
+  @-moz-keyframes animate-flyOutRight {
+    from {
+      .translate3d(@from, 0, 0);
+    }
+    to {
+      .translate3d(@to, 0, 0);
+    }
+  }
+  @-o-keyframes animate-flyOutRight {
+    from {
+      .translate3d(@from, 0, 0);
+    }
+    to {
+      .translate3d(@to, 0, 0);
+    }
+  }
+  @keyframes animate-flyOutRight {
+    from {
+      .translate3d(@from, 0, 0);
+    }
+    to {
+      .translate3d(@to, 0, 0);
+    }
+  }
+}

@@ -1,0 +1,11 @@
+<td class="type">
+  <img src="<%= this.model.escape('icon') %>" class="img-thumbnail">
+</td>
+<td class="title<% if (this.model.isMp4()) { %> success<% } %>">
+  <a href="<%= this.presentUrl() %>" <% if (this.model.isDirectory()) { %>data-parent="<%= this.model.get('id') %>"<% } %>>
+    <%= this.model.escape('name') %>
+  </a>
+  <% if (this.model.isVideo() === true && this.model.isMp4() === false) { %>
+    <a href="javascript: void(0)" data-action="convert" class="btn btn-info pull-right">Convert to Mp4</a>
+  <% } %>
+</td>
