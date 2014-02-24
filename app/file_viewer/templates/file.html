@@ -1,5 +1,5 @@
 <td class="type">
-  <img src="<%= this.model.escape('icon') %>" class="img-thumbnail">
+  <a href="<%= this.model.streamingUrl() %>"><img src="<%= this.model.escape('icon') %>" class="img-thumbnail"></a>
 </td>
 <td class="title<% if (this.model.isMp4()) { %> success<% } %>">
   <a href="<%= this.presentUrl() %>" <% if (this.model.isDirectory()) { %>data-parent="<%= this.model.get('id') %>"<% } %>>
