@@ -32,9 +32,9 @@ var TokenView = Backbone.View.extend({
 
   login: function(){
     var qs = {
-      client_id: 1133,
-      response_type: 'token',
-      redirect_uri: 'http://localhost:3000/'
+      client_id: 1155,
+      redirect_uri: 'http://wookiehangover.github.io/putcast/',
+      response_type: 'token'
     }
     location = 'https://api.put.io/v2/oauth2/authenticate?' + $.param(qs)
   },
