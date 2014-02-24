@@ -3,18 +3,20 @@ var Backbone = require('backbone')
 var API_ROOT = 'https://api.put.io/v2'
 
 module.exports = Backbone.Model.extend({
+  convertUrl: function () {
+    var url = [
+      API_ROOT,
+      '/files/', this.get('id'),
+      '/mp4?oauth_token=', this.collection.token
+    ].join('')
+    return url
+  },
 
   convert: function () {
     var params = {
       method: 'post',
       dataType: 'json',
-      url: [
-        API_ROOT,
-        '/files/',
-        this.get('id'),
-        '/mp4?oauth_token=',
-        this.collection.token
-      ].join('')
+      url: this.convertUrl()
     }
     return $.ajax(params)
   },
@@ -23,14 +25,7 @@ module.exports = Backbone.Model.extend({
     var params = {
       method: 'get',
       dataType: 'json',
-      url: [
-        API_ROOT,
-        '/files/',
-        this.get('id'),
-        '/mp4?oauth_token=',
-        this.collection.token,
-        '&callback=?'
-      ].join('')
+      url: this.convertUrl() + '&callback=?'
     }
     var model = this
     return $.ajax(params).then(function(data){
